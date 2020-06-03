@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Page</title>
+</head>
+<body>
+    <!-- template 우리가 만든 모델 데이터 연결-->
+{% for article in article.all %}
+    <div class="container">
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.body}}</p>
+        <p>{{ article.date }}</p>
+    </div>
+{% endfor %}
+
+{% for blog in blog.all %}
+    <div class="container">
+        <h1>{{ blog.title }}</h1>
+        <p>{{ blog.body }}</p>
+        <p>{{ blog.data }}</p>
+    </div>
+{% endfor %}
+
+</body>
+</html>
