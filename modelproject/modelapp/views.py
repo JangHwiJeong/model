@@ -5,5 +5,5 @@ from .models import Article, Blog
 def home(request):
     article = Article.objects
     blog = Blog.objects
-    return render(request,'home.html', {'article':article}, {'blog':blog})
+    return render(request,'home.html', {'article':article, 'blog':blog})
 
